@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <div id="budgetbox">
+        <h1>Budget Planner</h1>
+        <input type="text" placeholder="what is your budget?" id="balance">
+      <div id="formbox">
+        <select placeholder="categories" id="droplist">
+          <option value="entertainment">entertainment</option>
+          <option value="food">food</option>
+          <option value="clothing">clothing</option>
+          <option value="bills">bills</option>
+        </select>
+        <input type="text" placeholder="cost" id="cost">
+        <input type="submit" value="add" id="submitButton">
+      </div>
+      </div>
+    </form>
+    <div id="resultbox">
+      <div class="log">
+        <h2>Purchases:</h2>
+        <ol id="purchases"></ol>
+      </div>
+      <div class="remainder"></div>
+    </div>
+    <script href="index.js"></script>
+  </body>
+</html>

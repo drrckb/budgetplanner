@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://previews.123rf.com/images/valeriaz/valeriaz1701/valeriaz170101007/69817544-currency-seamless-pattern-dollar-sign-background-texture-with-usd-paper-money-symbols-dark-objects-o.jpg");
+  font-family: 'Quicksand', sans-serif;
+}
+
+#budgetbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1, h2 {
+  color: #1C4220;
+  width: 100%;
+  padding: 10px;
+  background-color: #FFF;
+  text-align: center;
+}
+
+#balance {
+  border: 1px solid #1C4220;
+  color: #1C4220;
+  outline: none;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#formbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#droplist {
+  background-color: #1C4220;
+  border: 1px solid #1C4220;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  outline: none;
+  color: #FFF;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+#cost {
+  border: 1px solid #1C4220;
+  outline: none;
+  color: #1C4220;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+#submitButton {
+  background-color: #1C4220;
+  border: 1px solid #1C4220;
+  border-radius: 5px;
+  outline: none;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 20px;
+}
