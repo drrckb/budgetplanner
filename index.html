@@ -11,8 +11,11 @@
     <form>
       <div id="budgetbox">
         <h1>Budget Planner</h1>
-        <input type="text" placeholder="what is your budget?" id="balance">
+        <input type="text" placeholder="what is your budget?" id="budgetInput">
+        <input type="submit" value="set budget" id="budgetSubmit">
+        <span id="budget">0.00</span>
       <div id="formbox">
+        <h2> Submit Your Monthly Expenses:</h2>
         <select placeholder="categories" id="droplist">
           <option value="entertainment">entertainment</option>
           <option value="food">food</option>
@@ -20,16 +23,15 @@
           <option value="bills">bills</option>
         </select>
         <input type="text" placeholder="cost" id="cost">
-        <input type="submit" value="add" id="submitButton">
+        <input type="submit" value="add expense" id="expenseSubmit">
       </div>
       </div>
     </form>
     <div id="resultbox">
-      <div class="log">
-        <h2>Purchases:</h2>
-        <ol id="purchases"></ol>
+        <h2>Expenses:</h2>
+        <ol id="expenseList"></ol>
       </div>
-      <div class="remainder"></div>
+      <span id="remainder">remainder</span>
     </div>
     <script href="index.js"></script>
   </body>
