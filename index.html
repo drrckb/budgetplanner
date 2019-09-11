@@ -8,31 +8,30 @@
     <title></title>
   </head>
   <body>
-    <form>
-      <div id="budgetbox">
-        <h1>Budget Planner</h1>
-        <input type="text" placeholder="what is your budget?" id="budgetInput">
-        <input type="submit" value="set budget" id="budgetSubmit">
-        <span id="budget">0.00</span>
-      <div id="formbox">
-        <h2> Submit Your Monthly Expenses:</h2>
-        <select placeholder="categories" id="droplist">
-          <option class="entertainment" value="entertainment">entertainment</option>
-          <option class="food" value="food">food</option>
-          <option class="clothing" value="clothing">clothing</option>
-          <option class="bills" value="bills">bills</option>
+    <main id="formBox">
+      <div class="budgetFeedback">budget feedback</div>
+      <form id="budgetBox">
+        <h1 class="setBudget">Set Your Budget</h1>
+        <input type="text" placeholder="amount" class="budgetInput">
+        <button type="submit" class="budgetSubmit">set</button>
+        <span class="budgetAmount">$$$budget$$$</span>
+      </form>
+      <form id="expenseBox">
+        <h2 class="enterExpense">Enter Expense</h2>
+        <select class="expenseType">
+          <option value="entertainment" class="entertainment">entertainment</option>
+          <option value="food" class="food">food</option>
+          <option value="clothing" class="clothing">clothing</option>
+          <option value="bills" class="bills">bills</option>
         </select>
-        <input type="text" placeholder="cost" id="expenseInput">
-        <input type="submit" value="add expense" id="expenseSubmit">
+        <input type="text" placeholder="amount" class="expenseInput">
+        <button type="submit" class="expenseSubmit">add</button>
+        <span class="remainingBalance">$$$balance$$$</span>
+      </form>
+      <div id="listBox">
+        <h2>expense list</h2>
       </div>
-      </div>
-    </form>
-    <div id="resultbox">
-        <h2>Expenses:</h2>
-        <ol id="expenseList"></ol>
-      </div>
-      <span id="remainder">remainder</span>
-    </div>
-    <script href="index.js"></script>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>

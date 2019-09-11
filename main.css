@@ -1,105 +1,80 @@
+
 body {
   margin: 0;
   padding: 0;
-  background-image: url("https://previews.123rf.com/images/valeriaz/valeriaz1701/valeriaz170101007/69817544-currency-seamless-pattern-dollar-sign-background-texture-with-usd-paper-money-symbols-dark-objects-o.jpg");
-  font-family: 'Quicksand', sans-serif;
 }
 
-#budgetbox {
+main {
+  font-family: 'Quicksand', sans-serif;
+  background-image: url("https://previews.123rf.com/images/valeriaz/valeriaz1701/valeriaz170101007/69817544-currency-seamless-pattern-dollar-sign-background-texture-with-usd-paper-money-symbols-dark-objects-o.jpg");
+  width: 100%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.budgetFeedback {
+  display: none;
+}
+
+#budgetBox, #expenseBox, #listBox {
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+}
+
+#budgetBox, #expenseBox {
+  height: 300px;
+  border-bottom: 2px solid #1C4220;
+}
+
+#listbox {
+  height: 100vh;
 }
 
 h1, h2 {
-  color: #1C4220;
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   background-color: #FFF;
+  color: #1C4220;
   text-align: center;
 }
 
-#budgetInput {
-  border: 1px solid #1C4220;
+input {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 20px;
   color: #1C4220;
-  outline: none;
-  width: 300px;
-  height: 50px;
-  margin-bottom: 10px;
   text-align: center;
-  font-size: 18px;
-}
-
-#budget {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  margin-bottom: 10px;
-  background-color: #FFF;
-}
-
-#formbox {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-#droplist {
-  background-color: #1C4220;
-  border: 1px solid #1C4220;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
-  outline: none;
-  color: #FFF;
-  width: 50%;
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-#expenseInput {
-  border: 1px solid #1C4220;
-  outline: none;
-  color: #1C4220;
-  width: 50%;
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-#budgetSubmit, #expenseSubmit {
-  background-color: #1C4220;
-  border: 1px solid #1C4220;
+  border: 1px solid;
   border-radius: 5px;
-  outline: none;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 15px;
-  width: 50%;
-  height: 40px;
+}
+
+button {
+  width: 150px;
+  height: 30px;
   margin-bottom: 20px;
+  background-color: #1C4220;
+  color: #FFF;
+  border-radius: 5px;
 }
 
-#resultbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#remainder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+span {
   width: 100%;
-  height: 50px;
-  margin-bottom: 10px;
+  padding: 5px 0px;
   background-color: #FFF;
+  color: #1C4220;
+  text-align: center;
+}
+
+select {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: #1C4220;
+  color: #FFF;
+  border: 1px solid;
+  border-radius: 5px;
+  text-transform: uppercase;
 }

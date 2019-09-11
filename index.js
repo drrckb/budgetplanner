@@ -34,28 +34,57 @@
 //
 // console.log(budget);
 
-const budgetBox = document.querySelector('#budgetbox');
-const budgetInput = document.querySelector('#budgetInput');
-const budgetSubmit = document.querySelector('#budgetSubmit');
-const budget = document.querySelector('#budget');
-const formBox = document.querySelector('#formbox');
-const dropList = document.querySelector('#droplist')
-const entertainment = document.querySelector('.entertainment')
-const food = document.querySelector('.food')
-const clothing = document.querySelector('.clothing')
-const bills = document.querySelector('.bills')
-const expenseInput = document.querySelector('#expenseInput');
-const expenseSubmit = document.querySelector('#expenseSubmit');
-const resultBox = document.querySelector('#resultbox');
-const expenseList = document.querySelector('expenseList');
-const remainder = document.querySelector('#remainder');
 
 
-form.addEventListener('submit', event => {
-  event.preventDefault();
 
-  const span  = document.createElement('span')
-  span.innerHTML = budgetInput.value;
-  document.querySelector('#budget').innerHTML.value;
-  console.log('budget');
-});
+
+
+// class UI {
+//   constructor(){
+//     this.formBox = document.querySelector('#formBox');
+//
+//     this.budgetFeedback = document.querySelector('.budgetFeedback');
+//     this.budgetBox = document.querySelector('#budgetBox');
+//     this.budgetInput = document.querySelector('.budgetInput');
+//     this.budgetSubmit = document.querySelector('.budgetSubmit');
+//     this.budgetAmount = document.querySelector('.budgetAmount');
+//
+//     this.expenseBox = document.querySelector('#expenseBox');
+//     this.expenseInput = document.querySelector('.expenseInput');
+//     this.expenseType = document.querySelector('.expenseType');
+//     this.entertainmentType = document.querySelector('.entertainment');
+//     this.foodType = document.querySelector('.food');
+//     this.clothingType = document.querySelector('.clothing');
+//     this.billsType = document.querySelector('.bills');
+//     this.expenseSubmit = document.querySelector('.expenseSubmit');
+//     this.remainingBalance = document.querySelector('.remainingBalance');
+//
+//     this.listBox  = document.querySelector('#listBox');
+//     this.itemList = [];
+//     this.itemID = 0;
+//   };
+// };
+
+
+
+
+
+
+const formBox = document.querySelector('#formBox');
+
+const budgetBox = document.querySelector('#budgetBox');
+const budgetInput = document.querySelector('.budgetInput');
+const budgetSubmit = document.querySelector('.budgetSubmit');
+const budgetAmount = document.querySelector('.budgetAmount');
+
+const expenseBox = document.querySelector('#expenseBox');
+const expenseInput = document.querySelector('.expenseInput');
+const expenseType = document.querySelector('.expenseType');
+const entertainmentType = document.querySelector('.entertainment');
+const foodType = document.querySelector('.food');
+const clothingType = document.querySelector('.clothing');
+const billsType = document.querySelector('.bills');
+const expenseSubmit = document.querySelector('.expenseSubmit');
+const remainingBalance = document.querySelector('.remainingBalance');
+
+const listBox  = document.querySelector('#listBox');
