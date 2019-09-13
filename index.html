@@ -18,8 +18,7 @@
       </form>
       <form id="expenseBox">
         <h2 class="enterExpense">Enter Expense</h2>
-        <select name="expenseType" class="expenseType">
-          <option value="none">Select Category</option>
+          <select name="expenseType" class="expenseType">
           <option value="entertainment">entertainment</option>
           <option value="food">food</option>
           <option value="clothing">clothing</option>
@@ -30,7 +29,22 @@
         <span class="remainingBalance">$$$balance$$$</span>
       </form>
       <div id="listBox">
-        <h2>expense list</h2>
+        <div class="categoryLists">
+          <h3>fun</h3>
+            <ul class="entertainment"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>food</h3>
+            <ul class="food"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>clothes</h3>
+            <ul class="clothing"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>bills</h3>
+            <ul class="bills"></ul>
+        </div>
       </div>
     </main>
     <script src="index.js"></script>

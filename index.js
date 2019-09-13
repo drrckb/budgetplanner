@@ -12,45 +12,47 @@ const billsType = document.querySelector('.bills');
 const expenseSubmit = document.querySelector('.expenseSubmit');
 const remainingBalance = document.querySelector('.remainingBalance');
 const listBox  = document.querySelector('#listBox');
+const enetertainmentList = document.querySelector('.entertainment');
+const foodList = document.querySelector('.food');
+const clothingList = document.querySelector('.clothing');
+const billsList = document.querySelector('.bills');
+
 
 
 class Budget {
   constructor() {
     this.budget = 0;
-    this.entertainment = 0;
-    this.food = 0;
-    this.clothing = 0;
-    this.bills = 0;
-    // this.amount =0;
-  }
+    this.entertainment = [];
+    this.food = [];
+    this.clothing = [];
+    this.bills = [];
+  };
 
   setBudget(myBudget) {
-      this.budget = myBudget;
-  }
+    this.budget = myBudget;
+  };
 
   purchase(expenseType, expenseInput) {
-    if (expenseType === "entertainment") {
-      this.entertainment += expenseInput;
-      this.budget -= expenseInput;
-    }
-    else if (expenseType === "food") {
-      this.food += expenseInput;
-      this.budget -= expenseInput;
-    }
-    else if (expenseType === "clothing") {
-      this.clothing += expenseInput;
-      this.budget -= expenseInput;
-    }
-    else if (expenseType === "bills") {
-      this.bills += expenseInput;
-      this.budget -= expenseInput;
-    }
+      if (this.budget - expenseInput < 0){
+        alert('You are going to spend more than your budget.');
+      } else {
+        this[expenseType].push(expenseInput);
+        this.budget -= expenseInput;
+
+        this.renderList(expenseType);
+      };
+  };
+
+  renderList(type){
+    const list = document.querySelector(`.${type}`);
+
+    list.innerHTML = this[type].map(expenseCost => `<li>${expenseCost}</li>`);
   };
 };
 
 const budget = new Budget();
 
-function addBudget(e){
+  function addBudget(e){
     e.preventDefault();
     const formData = new FormData(budgetBox);
     // console.log(formData.get("budgetInput"));
@@ -59,9 +61,9 @@ function addBudget(e){
     console.log(budget);
     const span = document.querySelector('.budgetAmount');
     span.innerHTML = budget.budget;
-};
+  };
 
-function addExpense(e){
+  function addExpense(e){
     e.preventDefault();
     const formData = new FormData(expenseBox);
     let expenseInputAmount = formData.get("expenseInput")
@@ -70,17 +72,16 @@ function addExpense(e){
     console.log(budget);
     const remainingBalance = document.querySelector('.remainingBalance');
     remainingBalance.innerHTML = budget.budget;
-    // remainingBalance.innerHTML = budgetInput.value - expenseInput.value;
-}
+  };
 
-budgetBox.addEventListener("submit", addBudget);
+  function addListItem(e){
+    e.preventDefault();
+    const enetertainmentItem = document.createElement('li');
+    entertainmentItem.innerHTML = expenseInput.value;
+  };
+
+
+
+budgetBox.addEventListener('submit', addBudget);
 expenseBox.addEventListener('submit', addExpense);
-
-
-
-
-
-
-
-
-
+listBox.addEventListener('submit', addListItem);

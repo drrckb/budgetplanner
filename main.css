@@ -17,27 +17,43 @@ main {
   display: none;
 }
 
-#budgetBox, #expenseBox, #listBox {
+#budgetBox, #expenseBox {
   width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 4px solid #1C4220;
 }
 
-#budgetBox, #expenseBox {
-  height: 300px;
-  border-bottom: 2px solid #1C4220;
-}
-
-#listbox {
+#listBox {
+  width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.categoryLists {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 25px;
+}
+
+h3 {
+  width: 100%;
+  height: 25px;
+  padding: 5px 1px;
+  text-align: center;
+  border-bottom: 1px solid #1C4220;
+  color: #FFF;
 }
 
 h1, h2 {
   width: 100%;
   padding: 10px 0px;
-  background-color: #FFF;
-  color: #1C4220;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFF;
   text-align: center;
 }
 
@@ -49,6 +65,7 @@ input {
   text-align: center;
   border: 1px solid;
   border-radius: 5px;
+  outline: #1C4220;
 }
 
 button {
@@ -58,13 +75,14 @@ button {
   background-color: #1C4220;
   color: #FFF;
   border-radius: 5px;
+  outline: #1C4220;
 }
 
 span {
   width: 100%;
   padding: 5px 0px;
-  background-color: #FFF;
-  color: #1C4220;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFF;
   text-align: center;
 }
 
@@ -76,5 +94,28 @@ select {
   color: #FFF;
   border: 1px solid;
   border-radius: 5px;
+  outline: #1C4220;
   text-transform: uppercase;
+}
+
+ul {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-inline-start: 0;
+  color: #FFF;
+}
+
+
+
+
+/* Screen Size 760px + */
+@media only screen and (min-width:768px) {
+
+#budgetBox, #expenseBox, #listBox {
+  float: left;
+}
+
+
 }
