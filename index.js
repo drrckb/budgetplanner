@@ -1,4 +1,3 @@
-
 class Budget {
   constructor() {
     this.budget = 0;
@@ -7,9 +6,8 @@ class Budget {
     this.clothing = [];
     this.bills = [];
   };
-
-
-  setBudget(myBudget) {
+  
+setBudget(myBudget) {
     if (myBudget <= 0) {
       alert("submit a 'budget amount'");
     }
