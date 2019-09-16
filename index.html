@@ -9,17 +9,15 @@
   </head>
   <body>
     <main id="formBox">
-      <div class="budgetFeedback">budget feedback</div>
       <form id="budgetBox">
         <h1 class="setBudget">Set Your Budget</h1>
         <input type="text" placeholder="amount" name ="budgetInput" class="budgetInput">
         <button type="submit" class="budgetSubmit">set</button>
-        <span class="budgetAmount">$$$budget$$$</span>
+        <span class="budgetAmount">budget amount</span>
       </form>
       <form id="expenseBox">
         <h2 class="enterExpense">Enter Expense</h2>
-        <select name="expenseType" class="expenseType">
-          <option value="none">Select Category</option>
+          <select name="expenseType" class="expenseType">
           <option value="entertainment">entertainment</option>
           <option value="food">food</option>
           <option value="clothing">clothing</option>
@@ -27,10 +25,25 @@
         </select>
         <input type="text" placeholder="amount" name="expenseInput" class="expenseInput">
         <button type="submit" class="expenseSubmit">add</button>
-        <span class="remainingBalance">$$$balance$$$</span>
+        <span class="remainingBalance">remaining balance</span>
       </form>
       <div id="listBox">
-        <h2>expense list</h2>
+        <div class="categoryLists">
+          <h3>fun</h3>
+            <ul class="entertainment"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>food</h3>
+            <ul class="food"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>clothes</h3>
+            <ul class="clothing"></ul>
+        </div>
+        <div class="categoryLists">
+          <h3>bills</h3>
+            <ul class="bills"></ul>
+        </div>
       </div>
     </main>
     <script src="index.js"></script>
