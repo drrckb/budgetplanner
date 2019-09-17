@@ -8,7 +8,7 @@ main {
   font-family: 'Quicksand', sans-serif;
   background-image: url("https://previews.123rf.com/images/valeriaz/valeriaz1701/valeriaz170101007/69817544-currency-seamless-pattern-dollar-sign-background-texture-with-usd-paper-money-symbols-dark-objects-o.jpg");
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -28,16 +28,17 @@ main {
 
 #listBox {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
+  
 }
 
 .categoryLists {
   display: flex;
   flex-direction: column;
   margin: 0px 25px;
+
 }
 
 h3 {
@@ -98,12 +99,13 @@ select {
 }
 
 ul {
-  width: 40px;
+  width: auto;
   display: flex;
   flex-direction: column;
   list-style: none;
   padding-inline-start: 0;
   color: #FFF;
+  align-items: center;
 }
 
 
@@ -133,6 +135,7 @@ ul {
   #listBox {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
   }
 
 
@@ -196,6 +199,9 @@ ul {
   .categoryLists {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    height: 60vh;
+
   }
 
   h3 {

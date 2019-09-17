@@ -32,8 +32,10 @@ setBudget(myBudget) {
 
   renderList(type){
     const list = document.querySelector(`.${type}`);
-    list.innerHTML = this[type].map(expenseCost => `<li>${expenseCost}</li>`);
+    const data = this[type].map(expenseCost => `<li>$${expenseCost}</li>`);
+    list.innerHTML = data.join('');
   };
+
 
 
 };
@@ -69,12 +71,6 @@ function addExpense(e){
   document.querySelector('#expenseBox').reset();
 };
 
-function addListItem(e){
-  e.preventDefault();
-  const enetertainmentItem = document.createElement('li');
-  entertainmentItem.innerHTML = expenseInput.value;
-};
-
 budgetBox.addEventListener('submit', addBudget);
 expenseBox.addEventListener('submit', addExpense);
-listBox.addEventListener('submit', addListItem);
+
