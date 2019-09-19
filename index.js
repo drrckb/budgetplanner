@@ -11,9 +11,12 @@ setBudget(myBudget) {
     if (myBudget <= 0) {
       alert("submit a 'budget amount'");
     }
+    else if (myBudget >= 1){
+      this.budget += myBudget;
+    }
     else {
       this.budget = myBudget;
-    };
+    }
   };
 
   purchase(expenseType, expenseInput) {
@@ -34,9 +37,16 @@ setBudget(myBudget) {
     const list = document.querySelector(`.${type}`);
     const data = this[type].map(expenseCost => `<li>$${expenseCost}</li>`);
     list.innerHTML = data.join('');
-  };
+  
+ 
+  // const sum = numbers.reduce(add)
 
+    const expenseTotal = (accumulator, currentValue) => accumulator + currentValue;
 
+    const span = document.querySelector(`.${type}-total`);
+    // span.innerHTML = this[type].reduce(expenseTotal);
+    span.innerHTML =  `$ ${this[type].reduce(expenseTotal)}`;
+  };  
 
 };
 
@@ -51,8 +61,8 @@ function addBudget(e){
   let myBudget = formData.get("budgetInput");
   budget.setBudget(Number(myBudget));
   console.log(budget);
-  const span = document.querySelector('.budgetAmount');
-  span.innerHTML = `budget: $${budget.budget}`;
+  const p = document.querySelector('.budgetAmount');
+  p.innerHTML = `budget: $${budget.budget}`;
 
   document.querySelector('#budgetBox').reset();
 };
