@@ -11,9 +11,9 @@
     <main id="formBox">
       <form id="budgetBox">
         <h1 class="setBudget">Set Your Budget</h1>
-        <input type="text" placeholder="enter budget amount" name ="budgetInput" class="budgetInput">
-        <button type="submit" class="budgetSubmit">set / add more</button>
-        <p class="budgetAmount">budget amount</p>
+        <input type="text" placeholder="budget amount" name ="budgetInput" class="budgetInput">
+        <button type="submit" class="budgetSubmit">set / increase</button>
+        <p class="budgetAmount"></p>
       </form>
       <form id="expenseBox">
         <h1 class="enterExpense">Enter Expense</h1>
@@ -23,25 +23,29 @@
           <option value="clothing">clothing</option>
           <option value="bills">bills</option>
         </select>
-        <input type="text" placeholder="enter expense amount" name="expenseInput" class="expenseInput">
+        <input type="text" placeholder="expense amount" name="expenseInput" class="expenseInput">
         <button type="submit" class="expenseSubmit">add</button>
-        <p class="remainingBalance">remaining balance</p>
+        <p class="remainingBalance"></p>
       </form>
       <div id="listBox">
         <div class="categoryLists">
-          <h3>entertainment<span class="entertainment-total"></h3>
+          <h3>entertainment</h3>
+          <span class="entertainment-total"></span>
             <ul class="entertainment"></ul>
         </div>
         <div class="categoryLists">
-          <h3>food<span class="food-total"></h3>
+          <h3>food</h3>
+          <span class="food-total"></span>
             <ul class="food"></ul>
         </div>
         <div class="categoryLists">
-          <h3>clothes<span class="clothing-total"></h3>
+          <h3>clothes</h3>
+          <span class="clothing-total"></span>
             <ul class="clothing"></ul>
         </div>
         <div class="categoryLists">
-          <h3>bills<span class="bills-total"></h3>
+          <h3>bills</h3>
+          <span class="bills-total"></span>
             <ul class="bills"></ul>
         </div>
       </div>

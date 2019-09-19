@@ -6,7 +6,7 @@ class Budget {
     this.clothing = [];
     this.bills = [];
   };
-  
+
 setBudget(myBudget) {
     if (myBudget <= 0) {
       alert("submit a 'budget amount'");
@@ -37,8 +37,8 @@ setBudget(myBudget) {
     const list = document.querySelector(`.${type}`);
     const data = this[type].map(expenseCost => `<li>$${expenseCost}</li>`);
     list.innerHTML = data.join('');
-  
- 
+
+
   // const sum = numbers.reduce(add)
 
     const expenseTotal = (accumulator, currentValue) => accumulator + currentValue;
@@ -46,7 +46,7 @@ setBudget(myBudget) {
     const span = document.querySelector(`.${type}-total`);
     // span.innerHTML = this[type].reduce(expenseTotal);
     span.innerHTML =  `$ ${this[type].reduce(expenseTotal)}`;
-  };  
+  };
 
 };
 
@@ -62,7 +62,7 @@ function addBudget(e){
   budget.setBudget(Number(myBudget));
   console.log(budget);
   const p = document.querySelector('.budgetAmount');
-  p.innerHTML = `budget: $${budget.budget}`;
+  p.innerHTML = `Budget: $${budget.budget}`;
 
   document.querySelector('#budgetBox').reset();
 };
@@ -76,11 +76,10 @@ function addExpense(e){
   budget.purchase(expenseInputType, Number(expenseInputAmount));
   console.log(budget);
   const remainingBalance = document.querySelector('.remainingBalance');
-  remainingBalance.innerHTML = `balance: $${budget.budget}`;
+  remainingBalance.innerHTML = `Balance: $${budget.budget}`;
 
   document.querySelector('#expenseBox').reset();
 };
 
 budgetBox.addEventListener('submit', addBudget);
 expenseBox.addEventListener('submit', addExpense);
-

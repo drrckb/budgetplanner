@@ -24,7 +24,6 @@ main {
 
 #listBox {
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
@@ -76,7 +75,7 @@ button {
   outline: #1C4220;
 }
 
-p {
+p:not(:empty) {
   width: 100%;
   padding: 5px 0px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -106,150 +105,154 @@ ul {
 }
 
 span:not(:empty){
-  color: #FFF;
-  font-weight: bold;
   margin: 0px 10px;
   padding: 0px 5px;
   border: 1px dashed;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
 }
 
 
-  /* Screen Size 760px + */
-  @media only screen and (min-width:768px) {
-
-  main {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #budgetBox, #expenseBox, #listBox {
-    width: 33.4%;
-    height: 100vh;
-    border-bottom: none;
-  }
-
-  #expenseBox {
-    border-left: 5px solid #1C4220;
-    border-right: 5px solid #1C4220;
-  }
-
-  #listBox {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-  }
-
-  .setBudget {
-    margin-top: 175px;
-    margin-bottom: 165px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    background-color: rgba(0, 0, 0, 0.6)
-  }
-
-  .enterExpense {
-    margin-top: 175px;
-    margin-bottom: 75px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    background-color: rgba(0, 0, 0, 0.6)
-  }
 
 
-  input {
-    width: 95%;
-    height: 40px;
-    margin-bottom: 50px;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #FFF;
-  }
-      ::placeholder {
-        color: #FFF;
-      }
 
+  /* Screen Size 500px + (was 760) */
+  @media only screen and (min-width:500px) {
 
-  button {
-    width: 50%;
-    height: 50px;
-    margin-bottom: 75px;
-    font-size: 20px;
-    background-color: #1C4220;
-    transition: 0.6s;
-  }
-      button:active {
-        background-color: rgba(0, 0, 0, 0.6);
-      }
+    main {
+      display: flex;
+      flex-direction: row;
+    }
 
-
-  p {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-
-  select {
-    width: 30%;
-    height: 40px;
-    margin-bottom: 50px;
-    font-size: 15px;
-  }
-
-
-  .categoryLists {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 60vh;
-    margin-top: 50px;
-  }
-
-  h3 {
-    font-size: 25px;
-    border-bottom: 2px solid #1C4220;
-  }
-
-  }
-
-  /* Screen Size 995px + */
-  @media only screen and (min-width:995px) {
-  
     #budgetBox, #expenseBox, #listBox {
       width: 33.4%;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-bottom: none;
     }
-  
+        h1 {
+          margin-bottom: 50px;
+        }
+
+        .setBudget{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .enterExpense {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+        }
+
+        .budgetInput {
+          margin-top: 60px;
+        }
+
+        input {
+          width: 100px;
+        }
+
+
     #expenseBox {
       border-left: 5px solid #1C4220;
       border-right: 5px solid #1C4220;
     }
-  
+        select {
+          margin-bottom: 30px;
+        }
+
+        button {
+          margin-top: 20px;
+          width: 100px;
+        }
+
+
     #listBox {
       display: flex;
       flex-direction: column;
-      overflow-y: auto;
+    }
+        .categoryLists {
+          width: 100%;
+          overflow-y: auto;
+        }
+
+  }
+
+
+
+
+
+    /* Screen Size 780px + */
+    @media only screen and (min-width:720px) {
+
+      h1 {
+        height: 80px;
+        font-size: 40px;
+      }
+
+      input {
+        width: 200px;
+      }
+
+      button {
+        width: 150px;
+      }
+
+  }
+
+
+
+
+
+  /* Screen Size 995px + */
+  @media only screen and (min-width:995px) {
+
+    .setBudget, .enterExpense {
+      height: 100px;
+      font-size: 50px;
+    }
+        select, button {
+          width: 150px;
+          height: 50px;
+        }
+
+        input {
+          width: 300px;
+          height: 50px;
+        }
+            .budgetInput {
+              margin-top: 80px;
+            }
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+          font-size: 40px;
+        }
+
+  }
+
+
+
+
+
+  /* Screen Size 1200px + */
+  @media only screen and (min-width:1200px) {
+
+    select, button {
+      width: 200px;
     }
 
-    p {
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 38px;
-      background-color: rgba(0, 0, 0, 0.6);
+    input {
+      width: 400px;
     }
-  
-    
-}
 
+  }
