@@ -114,9 +114,6 @@ span:not(:empty){
 }
 
 
-
-
-
   /* Screen Size 760px + */
   @media only screen and (min-width:768px) {
 
@@ -124,8 +121,6 @@ span:not(:empty){
     display: flex;
     flex-direction: row;
   }
-
-
 
   #budgetBox, #expenseBox, #listBox {
     width: 33.4%;
@@ -151,7 +146,7 @@ span:not(:empty){
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     background-color: rgba(0, 0, 0, 0.6)
   }
 
@@ -162,7 +157,7 @@ span:not(:empty){
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     background-color: rgba(0, 0, 0, 0.6)
   }
 
@@ -198,7 +193,7 @@ span:not(:empty){
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 30px;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
@@ -225,3 +220,36 @@ span:not(:empty){
   }
 
   }
+
+  /* Screen Size 995px + */
+  @media only screen and (min-width:995px) {
+  
+    #budgetBox, #expenseBox, #listBox {
+      width: 33.4%;
+      height: 100vh;
+      border-bottom: none;
+    }
+  
+    #expenseBox {
+      border-left: 5px solid #1C4220;
+      border-right: 5px solid #1C4220;
+    }
+  
+    #listBox {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    p {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 38px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  
+    
+}
+
