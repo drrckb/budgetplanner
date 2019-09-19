@@ -31,16 +31,18 @@ main {
 
 .categoryLists {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 0px 25px;
 }
 
 h3 {
-  width: 100%;
+  width: 60%;
   height: 25px;
   padding: 5px 1px;
   text-align: center;
-  border-bottom: 1px solid #1C4220;
+  border-bottom: 2px solid #FFF;
   color: #FFF;
 }
 
@@ -76,9 +78,10 @@ button {
 }
 
 p:not(:empty) {
-  width: 100%;
+  width: 70%;
   padding: 5px 0px;
   background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
   color: #FFF;
   text-align: center;
 }
