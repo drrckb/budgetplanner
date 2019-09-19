@@ -45,7 +45,7 @@ setBudget(myBudget) {
 
     const span = document.querySelector(`.${type}-total`);
     // span.innerHTML = this[type].reduce(expenseTotal);
-    span.innerHTML =  `$ ${this[type].reduce(expenseTotal)}`;
+    span.innerHTML =  `Total $ ${this[type].reduce(expenseTotal)}`;
   };
 
 };
