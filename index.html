@@ -12,8 +12,8 @@
       <form id="budgetBox">
         <h1 class="setBudget">Set Your Budget</h1>
         <input type="text" placeholder="amount" name ="budgetInput" class="budgetInput">
-        <button type="submit" class="budgetSubmit">set</button>
-        <span class="budgetAmount">budget amount</span>
+        <button type="submit" class="budgetSubmit">set / add more</button>
+        <p class="budgetAmount">budget amount</p>
       </form>
       <form id="expenseBox">
         <h2 class="enterExpense">Enter Expense</h2>
@@ -25,23 +25,23 @@
         </select>
         <input type="text" placeholder="amount" name="expenseInput" class="expenseInput">
         <button type="submit" class="expenseSubmit">add</button>
-        <span class="remainingBalance">remaining balance</span>
+        <p class="remainingBalance">remaining balance</p>
       </form>
       <div id="listBox">
         <div class="categoryLists">
-          <h3>fun</h3>
+          <h3>entertainment<span class="entertainment-total"></h3>
             <ul class="entertainment"></ul>
         </div>
         <div class="categoryLists">
-          <h3>food</h3>
+          <h3>food<span class="food-total"></h3>
             <ul class="food"></ul>
         </div>
         <div class="categoryLists">
-          <h3>clothes</h3>
+          <h3>clothes<span class="clothing-total"></h3>
             <ul class="clothing"></ul>
         </div>
         <div class="categoryLists">
-          <h3>bills</h3>
+          <h3>bills<span class="bills-total"></h3>
             <ul class="bills"></ul>
         </div>
       </div>
